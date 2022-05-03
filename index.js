@@ -188,7 +188,8 @@ function filterByWord(arr, string){
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
-/* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
+/* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, 
+but can test with originalFlavors.
 
 Use the getAverageWordLength function below to do the following:
   1. Receive the originalFlavors array
@@ -199,9 +200,10 @@ Use the getAverageWordLength function below to do the following:
 */
 
 function getAverageWordLength(arr){
-  const filterdW =arr.split(" ");
-
-  return filterdW;
+  for (let i = 0; i < arr.length; i++){
+  const filterdW =arr[i].length;
+ return filterdW;
+}
 }
 
 
@@ -218,8 +220,16 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-  /*code here*/
+function getRandomFlavors(arr1, arr2, arr3, arr4){
+  let randomFlavors= [];
+  let juice= Math.floor(Math.random()* arr1.length);
+  let cake= Math.floor(Math.random()* arr2.length);
+  let candy= Math.floor(Math.random()* arr3.length);
+  let snack= Math.floor(Math.random()* arr4.length);
+  while (randomFlavors.length < 30){
+  randomFlavors.push(arr1[juice], arr2[cake], arr3[candy], arr4[snack]);
+  }
+  return randomFlavors;
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
